@@ -1,0 +1,76 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+.btn {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 2px solid transparent;
+    white-space: nowrap;
+    @include button-size($btn-padding-vertical, $btn-padding-horizontal, $font-size-base, $line-height-base, $btn-border-radius);
+    @include user-select(none);
+
+    &:hover {
+        color: $btn-default-color;
+        text-decoration: none;
+    }
+
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+    }
+
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none; // Future-proof disabling of clicks
+    }
+}
+
+.btn-lg {
+    @include button-size($btn-padding-large-vertical, $btn-padding-large-horizontal, $btn-font-size-large, $line-height-base, $btn-border-radius-large);
+}
+
+.btn-md {
+    @include button-size($btn-padding-middle-vertical, $btn-padding-middle-horizontal, $btn-font-size-middle, $line-height-base, $btn-border-radius-middle);
+}
+
+.btn-primary {
+    @include button-variant($btn-primary-color, $btn-primary-border);
+}
+
+.btn-info {
+    @include button-variant($btn-info-color, $btn-info-border);
+}
+
+.btn-light {
+    @include button-variant($btn-light-color, $btn-light-border);
+
+    &:hover,
+    &.active {
+        color: $gray-darker;
+    }
+}
+
+// 特殊功能按钮
+.btn-special {
+    border-radius: $border-radius-base;
+}
+
+// 按钮点击后等待状态
+@include b(loading) {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: sub;
+    @include img-normal($image-path-base + "loading.gif");
+}

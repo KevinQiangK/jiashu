@@ -1,0 +1,108 @@
+//
+// Navs
+// --------------------------------------------------
+.nav {
+    @extend .clearfix;
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+
+    > li {
+        position: relative;
+        display: block;
+
+        > a {
+            position: relative;
+            display: block;
+            
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+
+    > li > a > img {
+        max-width: none;
+    }
+}
+
+//
+// Navbars
+// --------------------------------------------------
+.navbar {
+    @extend .clearfix;
+    position: relative;
+    min-height: $navbar-height;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zindex-navbar;
+}
+
+.navbar-left {
+    float: left !important;
+}
+
+.navbar-right {
+    float: right !important;
+    > li > a:hover {
+        border-bottom-color: transparent;
+    }
+}
+
+// Navbar heading
+.navbar-header {
+    @extend .clearfix;
+    float: left;
+
+    // .logo {
+    //     margin: 5px 15px 5px 0;
+    //     vertical-align: middle;
+    // }
+}
+
+.navbar-nav {
+    float: left;
+    margin: 0;
+
+    > li {
+        float: left;
+        
+        > a {
+            margin: 0 $navbar-margin-horizontal;
+            padding: $navbar-padding-top $navbar-padding-horizontal $navbar-padding-bottom;
+            border-bottom: 2px solid transparent;
+            line-height: $line-height-computed;
+            text-decoration: none;
+            font-size: $font-size-large;
+            color: $brand-primary;
+
+            &:hover,
+            &:active {
+                color: $brand-primary-light;
+                // border-bottom-color: $brand-danger;
+            }
+        }
+
+        > span {
+            display: block;
+            margin: 0 $navbar-margin-horizontal;
+            padding: $navbar-padding-top 0 $navbar-padding-bottom;
+            border-bottom: 2px solid transparent;
+            font-weight: 700;
+        }
+    }
+    
+    > li.active > a {
+        &,
+        &:hover,
+        &:active {
+            border-bottom-color: $brand-danger;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-modal;
+    -webkit-overflow-scrolling: touch;
+
+    outline: 0;
+
+    &.fade .modal-dialog {
+        @include translate(0, -25%);
+        @include transition-transform(0.3s ease);
+    }
+
+    &.in .modal-dialog {
+        @include translate(0, 0);
+    }
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-content {
+    position: relative;
+    border-radius: $border-radius-base;
+    background-clip: padding-box;
+    outline: 0;
+    overflow: hidden;
+    background-color: $modal-content-bg;
+    @include img-normal($image-path-base + "bg.png");
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zindex-modal;
+    height: 2000px;
+    @include rgba-bg($modal-backdrop-bg);
+    &.fade {
+        @include opacity(0);
+    }
+    &.in {
+        @include opacity($modal-backdrop-opacity);
+    }
+}
+
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+
+.modal-dialog {
+    position: relative;
+    width: $modal-md;
+    margin: 150px auto 50px;
+}
+
+.modal-sm {
+    width: $modal-sm;
+}
+.modal-md{
+    width: $modal-md;
+}
+
+.modal-lg {
+    width: $modal-lg;
+}
+
+//== 系统弹窗
+@include b(system_modal) {
+
+    label {
+        line-height: 40px;
+    }
+
+    .close {
+        margin-top: 8px;
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+    @include e(title) {
+        margin: 0;
+        padding: 8px 15px;
+        line-height: 20px;
+        color: #fff;
+        background-color: $gray-light;
+    }
+
+    @include e(content) {
+        min-height: 200px;
+        padding: 15px 30px;
+    }
+
+    // 一般描述性信息
+    @include e(info) {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    // 提示信息
+    @include e(tip) {
+        text-align: center;
+        color: $gray;
+    }
+
+    @include e(btn_wrapper) {
+        margin-top: 50px;
+        margin-bottom: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: 1px solid $gray-lighter;
+        text-align: center;
+    }
+}

@@ -1,0 +1,85 @@
+//== alert
+@include b(alert) {
+    position: absolute;
+    top: 100%;
+    z-index: $zindex-alert;
+    margin: 6px 0 0;
+    padding: 10px;
+    border-radius: $border-radius-base;
+    color: $brand-info;
+    @include rgba-bg(rgba(0, 0, 0, 0.5));
+
+    
+    @include m(error) { // 替换为 .alert-arrow_tp_lf（弃用）
+        @extend .alert;
+
+        &:before {
+            position: absolute;
+            top: -6px;
+            border-bottom: 6px solid rgba(0, 0, 0, 0.5);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            content: '';
+        }
+    }
+    
+    // 箭头在提示框左上角
+    @include m(arrow_tp_lf) {
+        @extend .alert;
+        left: 0;
+        
+        &:before {
+            position: absolute;
+            top: -6px;
+            border-bottom: 6px solid rgba(0, 0, 0, 0.5);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            content: '';
+        }
+    }
+
+    // 箭头在提示框上方中间
+    @include m(arrow_tp) {
+        @extend .alert;
+        left: 50%;
+        text-align: center;
+
+        &:before {
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            margin-left: -6px;
+            border-bottom: 6px solid rgba(0, 0, 0, 0.5);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            content: '';
+        }
+    }
+    
+    // 系统提示
+    @include m(system) {
+        @extend .alert;
+        position: static;
+        display: inline-block;
+    }
+}
+
+//== hover explain
+@include b(hover_explain) {
+    position: relative;
+
+    @include e(point) {
+        @extend .fa;
+        @extend .fa-circle;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        font-size: 12px;
+        color: $brand-primary;
+    }
+
+    @include e(tip) {
+        @extend .alert-arrow_tp_lf;
+        left: 0;
+    }
+}

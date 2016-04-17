@@ -1,0 +1,158 @@
+//== Colors
+$brand-primary:             #cc7f48 !default;
+$brand-primary-dark:        darken($brand-primary, 10%) !default;
+$brand-primary-light:       lighten($brand-primary, 10%) !default;
+$brand-info:                #23c3f4 !default;
+$brand-danger:              #ec6941 !default;
+$brand-success:             #638c0b !default;
+
+$gray-base:              #080103 !default; 
+$gray-darker:            #333 !default;
+$gray-dark:              #444 !default;
+$gray:                   #686868 !default;
+$gray-light:             #999 !default; //
+$gray-lighter:           #ddd !default;
+$gray-lightest:          #ebebea !default;
+
+$text-color:             $gray-darker !default;
+$link-color:             $brand-primary !default;
+$link-hover-color:       darken($link-color, 15%) !default;
+
+//== Z-index
+$zindex-navbar:            1050 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-modal:             1070 !default;
+$zindex-alert:             1000 !default;
+
+//== Typography
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, "Lantinghei SC", "Microsoft YaHei", Arial, sans-serif !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         16px !default;
+
+$font-size-h1:            48px !default;
+$font-size-h2:            36px !default;
+$font-size-h3:            24px !default;
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
+
+$line-height-base:        1.428571429 !default; // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$border-color-base:       #e5e5e5 !default;  
+$border-radius-base:      4px !default; 
+
+//== font path
+$font-path-base:             "../fonts/";
+
+//== Background image path
+$image-path-base:            "../images/";
+
+
+//== Grid system
+$grid-columns:              12 !default;
+$grid-gutter-width:         30px !default;
+
+//== Container sizes
+$screen-lg:                    1450px !default;
+$container-lg:                 1350px !default;
+$container-main:               1000px !default;
+
+//== Navs
+$navbar-height:                    20px !default;
+$navbar-line-height:               20px !default; 
+$navbar-border-radius:             $border-radius-base !default;
+$navbar-margin-horizontal:         0px !default;
+$navbar-padding-horizontal:        15px !default;
+$navbar-padding-top:               30px !default;
+$navbar-padding-bottom:            8px !default;
+$navbar-bg:                        #fff !default;
+
+//== Btns
+$btn-padding-vertical:           8px !default;
+$btn-padding-horizontal:         45px !default;
+$btn-border-radius:              20px !default;
+
+$btn-padding-middle-vertical:     12px !default;
+$btn-padding-middle-horizontal:   55px !default;
+$btn-border-radius-middle:        25px !default;
+$btn-font-size-middle:            16px !default;
+
+$btn-padding-large-vertical:     13px !default;
+$btn-padding-large-horizontal:   60px !default;
+$btn-border-radius-large:        30px !default;
+$btn-font-size-large:            18px !default;
+
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              #fff !default;
+$btn-default-border:             #fff !default;
+
+$btn-primary-color:              $brand-primary !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+
+$btn-info-color:                 $brand-info !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 5%) !default;
+
+$btn-light-color:                #fff !default;
+$btn-light-border:               darken($btn-light-color, 5%) !default;
+
+
+//== Tables
+$table-cell-padding:            8px !default;
+$table-cell-padding-large:      15px !default;
+$table-bg:                      transparent !default;
+$table-bg-head:                 #999;
+$table-bg-hover:                #dadfe3 !default;
+$table-bg-accent:               #eaeef1 !default;
+$table-color-head:              #fff;
+$table-border-color:            #ddd !default;
+
+//== Forms
+$input-bg:                      rgba(0, 0, 0, 0) !default;
+$input-color-light:             #fff !default;
+$input-color:                   #444 !default;
+$input-color-placeholder:       $gray-light !default;
+$input-border:                  #ccc !default;
+$input-border-light:            #fff !default;
+$input-border-focus:            $brand-info !default;
+$input-border-radius:           4px !default;
+$input-height-base:             40px !default;
+$input-height-large:            55px !default;
+$input-font-size-large:         18px !default;
+$input-height-middle:           50px !default;
+$input-font-size-middle:        16px !default;
+
+//== Modal
+$modal-content-bg:              #fff;
+$modal-backdrop-bg:             rgba(0, 0, 0, 0.5);
+$modal-backdrop-opacity:        .5 !default;
+$modal-lg:                      900px !default;
+$modal-md:                      600px !default;
+$modal-sm:                      400px !default;
+
+//== Pagination
+$pagination-color:                     $gray !default;
+$pagination-bg:                        #e8ebee !default;
+$pagination-border:                    #ddd !default;
+
+$pagination-hover-color:               $link-hover-color !default;
+$pagination-hover-bg:                  $gray-lightest !default;
+$pagination-hover-border:              #ddd !default;
+
+$pagination-active-color:              #fff !default;
+$pagination-active-bg:                 $brand-primary !default;
+$pagination-active-border:             $brand-primary !default;
+
+$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           #ddd !default;

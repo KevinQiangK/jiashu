@@ -1,0 +1,90 @@
+@mixin form-control-focus($color: $input-border-focus) {
+    $color-rgba: rgba(red($color), green($color), blue($color), .6);
+    &:focus {
+        border-color: $color;
+        outline: 0;
+        @include box-shadow(inset 0 0 4px $color-rgba, 0 0 8px $color-rgba);
+    }
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: $input-height-base;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $input-color;
+    @include rgba-bg($input-bg);
+    background-image: none;
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius;
+    //@include box-shadow(inset 0 0 1px rgba(0, 0, 0, .75));
+    @include transition(border-color ease .15s, box-shadow ease .15s);
+    @include form-control-focus;
+    @include placeholder;
+}
+
+.form-control-light {
+    color: $input-color-light;
+    border-color: $input-border-light;
+}
+
+.form-control-primary {
+    color: $brand-primary;
+    border-color: $brand-primary;
+    @include form-control-focus($brand-primary);
+    @include placeholder($brand-primary-light);
+}
+
+.form-control-lg {
+    height: $input-height-large;
+    padding: 8px 14px;
+    font-size: $input-font-size-large;
+}
+
+.form-control-md {
+    height: $input-height-middle;
+    padding: 8px 14px;
+    font-size: $input-font-size-middle;
+}
+
+.form-control-error {
+    border-color: $brand-danger;
+    color: $brand-danger;
+    @include form-control-focus($brand-danger);
+    @include placeholder($brand-danger);
+}
+
+.form-control-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    position: relative;
+    display: block;
+
+    label {
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: normal;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        // position: absolute;
+        // margin-left: -20px;
+        // margin-top: 4px;
+        display: none;
+    }
+
+    .fa.fa-square-o,
+    .fa.fa-check-square-o {
+        position: absolute;
+        top: 2px;
+        left: 0;
+    }
+}

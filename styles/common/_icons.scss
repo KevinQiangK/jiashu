@@ -1,0 +1,29 @@
+.icon-forex {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    vertical-align: middle;
+    background-position: 50%;
+}
+@each $name in $forex-names {
+
+    .icon-forex-#{$name} {
+        @extend .icon-forex;
+        @include img-retina($icon-path-forex + "#{$name}.png", $icon-path-forex + "#{$name}@2x.png", 50px, 40px);
+    }
+}
+
+.icon-bank {
+    display: inline-block;
+    width: 129px;
+    height: 42px;
+    vertical-align: middle;
+    @include img-normal($icon-path-bank + "banks.png");
+}
+@each $name in $bank-names {
+    .icon-bank-#{$name} {
+        @extend .icon-bank;
+        background-position-x: 0;
+        background-position-y: -(index($bank-names, $name) - 1) * 44px;
+    }
+}

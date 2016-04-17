@@ -1,0 +1,31 @@
+// BEM model
+
+// Block
+@mixin b($name) {
+    @at-root .#{$name} {
+        @content;
+    }
+}
+
+// Elements get appended with "__" and the $name
+@mixin e($element_name, $block_name: false) {
+    @at-root {
+        @if $block_name {
+            #{$block_name}__#{$element_name} {
+                @content;
+            }
+        }
+        @else {
+            #{&}__#{$element_name} {
+                @content;
+            }
+        }
+    }
+}
+
+// Modifiers get appended with "-" and the $name
+@mixin m($name) {
+    @at-root #{&}-#{$name} {
+        @content;
+    }
+}

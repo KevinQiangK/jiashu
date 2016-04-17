@@ -1,0 +1,131 @@
+.home {
+    
+    // 成功案例
+    @include e(case) {
+        display: block;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    @include e(about) {
+        color: $gray;
+    }
+}
+
+.home_row {
+    @extend .row;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.home_slogan {
+    background-color: $brand-primary;
+    
+    @include e(content) {
+        @extend .container;
+        position: relative;
+        height: 350px;
+    }
+
+    @include e(icon) {
+        position: absolute;
+        color: $brand-danger;
+
+        &:nth-child(1) {
+            top: 40px;
+            left: 80px;
+            font-size: 280px;
+        }
+
+        &:nth-child(2) {
+            top: 30px;
+            left: 420px;
+            font-size: 340px;
+        }
+
+        &:nth-child(3) {
+            top: 30px;
+            left: 800px;
+            font-size: 340px;
+        }
+    }
+
+    @include e(title) {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-top: -25px;
+        margin-bottom: 0;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.home_pnl {
+    float: left;
+    width: 316.5px;
+    margin: 5px;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: $brand-success;
+
+    @include e(icon) {
+        float: right;
+        font-size: 60px;
+        color: #fff;
+    }
+
+    @include e(title) {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    @include e(info) {
+        font-size: 16px;
+        color: #fff;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.home_info {
+    @extend .home_pnl;
+    min-height: 380px;
+    border: 1px solid $gray-base;
+    border-radius: 4px;
+    background-color: #fff;
+
+    @include e(title) {
+        margin-top: 0;
+        font-weight: 400;
+        color: $brand-success;
+        text-align: center;
+    }
+}
+
+.home_news {
+    margin-bottom: 30px;
+    color: $gray;
+
+    @include e(date) {
+    }
+    
+    @include e(summary) {
+        margin-bottom: 0;
+    }
+
+    @include e(detail) {
+        float: right;
+        display: inline-block;
+        padding: 5px 20px;
+        border-radius: 4px;
+        background-color: $brand-success;
+        color: #fff;
+    }
+}

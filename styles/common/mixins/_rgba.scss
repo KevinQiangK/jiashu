@@ -1,0 +1,5 @@
+// rgba background color
+@mixin rgba-bg($color) {
+  background-color: $color;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($color)}', endColorstr='#{ie-hex-str($color)}'); 
+}

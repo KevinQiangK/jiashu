@@ -1,0 +1,30 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+    @include container-fixed();
+    width: $container-main;
+    
+    // @media (min-width: $screen-lg) {
+    //     width: $container-lg;
+    // }
+    // @media (max-width: $screen-lg) {
+    //     width: $container-main;
+    // }
+}
+
+// Row
+.row {
+    @include make-row();
+}
+
+// Columns
+
+@include make-grid-columns();
+@include make-grid(xs);
