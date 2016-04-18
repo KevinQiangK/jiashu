@@ -1,0 +1,6 @@
+.about {
+    
+    @include e(p) {
+        color: $gray;
+    }
+}

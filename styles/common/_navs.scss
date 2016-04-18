@@ -106,3 +106,29 @@
         }
     }
 }
+
+.navbar-side {
+    > li > a {
+        display: block;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: $border-radius-base;
+        text-align: center;
+        font-size: 18px;
+        color: $brand-success;
+        background-color: #fff;
+    }
+
+    > li:last-child > a {
+            margin-bottom: 0;
+    }
+
+    > li.active > a {
+        color: #fff;
+        background-color: $brand-primary;
+    }
+}

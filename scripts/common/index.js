@@ -1,3 +1,3 @@
-define(['common/navbar'], function () {
+define(['components/navbar'], function () {
     
 });

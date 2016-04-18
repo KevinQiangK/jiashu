@@ -42,3 +42,45 @@
         color: #fff;
     }
 }
+
+.layout-2 {
+    @extend .container;
+    display: table;
+
+    @include e(side) {
+        @extend .col-xs-3;
+        display: table-cell;
+        padding: 10px;
+        border-radius: $border-radius-base;
+        background-color: $brand-success;
+    }
+
+    @include e(content) {
+        @extend .col-xs-9;
+        display: table-cell;  
+    }
+
+    @include e(pnl) {
+        border: 1px solid $gray-base;
+        border-radius: $border-radius-base;
+    }
+
+    @include e(title) {
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        color: #fff;
+        background-color: $brand-primary;
+        overflow: hidden;
+
+        > .fa {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 80px;
+        }
+    }
+}
