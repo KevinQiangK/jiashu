@@ -21,14 +21,14 @@
                     </div>
 
                     <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="">首页</a>
+                        <li>
+                            <a href="/views/home/index.html">首页</a>
                         </li>
                         <li>
                             <span>|</span>
                         </li>
                         <li>
-                            <a href="">关于我们</a>
+                            <a href="/views/about/profile.html">关于我们</a>
                         </li>
                         <li>
                             <span>|</span>
@@ -214,5 +214,15 @@
                 </p> 
             </div>
         </div>
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/requirejs/require.js"></script>
+
+        <script>
+            require(['/scripts/common/config.js'], function () {
+                require(['common/index'], function () {
+
+                });
+            });
+        </script>
     </body>
 </html>

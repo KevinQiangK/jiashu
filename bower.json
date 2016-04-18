@@ -1,0 +1,7 @@
+{
+  "name": "jiashu",
+  "dependencies": {
+    "jquery": "1.11.1",
+    "requirejs": "^2.2.0"
+  }
+}
