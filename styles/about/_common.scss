@@ -1,6 +1,30 @@
 .about {
-    
     @include e(p) {
+        width: 600px;
+        margin: 0 auto 30px;
         color: $gray;
+    }
+
+    @include e(btn-sm) {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: $border-radius-base;
+        color: #fff;
+        background-color: $brand-success;
+    }
+
+    @include e(btn-succ) {
+        @extend .about__btn-sm;
+        width: 240px;
+        font-size: 20px;
+        color: $brand-success;
+        background-color: #fff;
+    }
+
+    @include e(btn-light) {
+        @extend .about__btn-succ;
+        border: 1px solid #fff;
+        color: #fff;
+        background-color: transparent;
     }
 }
