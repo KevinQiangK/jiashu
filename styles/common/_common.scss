@@ -1,0 +1,90 @@
+//== 动态
+.dynamic {
+
+    @include e(news) {
+        width: 600px;
+        margin: 0 auto;
+        color: $gray;
+    }
+
+    @include e(news-title) {
+        text-align: center;
+        font-size: 23px;
+        font-weight: 400;
+        color: $brand-success;
+    }
+
+    @include e(news-tip) {
+
+        color: $brand-success;
+    }
+
+    @include e(news-p) {
+        text-indent: 30px;
+    }
+}
+
+
+//== 团队
+.team {
+    @include e(pnl) {
+        width: 710px;
+        margin: 0 auto 10px;
+        padding: 20px;
+        border-radius: $border-radius-base;
+        background-color: $brand-success;
+    }
+
+    @include e(avatar) {
+        float: left;
+        width: 150px;
+        margin-right: 20px;
+    }
+    
+    @include e(desc) {
+        color: #fff;
+        overflow: auto;
+    }
+
+    @include e(desc-title) {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    @include e(desc-p) {
+        font-size: 12px;
+    }
+}
+
+
+//== 关于我们
+.about {
+    @include e(p) {
+        width: 600px;
+        margin: 0 auto 30px;
+        color: $gray;
+    }
+
+    @include e(btn-sm) {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: $border-radius-base;
+        color: #fff;
+        background-color: $brand-success;
+    }
+
+    @include e(btn-succ) {
+        @extend .about__btn-sm;
+        width: 240px;
+        font-size: 20px;
+        color: $brand-success;
+        background-color: #fff;
+    }
+
+    @include e(btn-light) {
+        @extend .about__btn-succ;
+        border: 1px solid #fff;
+        color: #fff;
+        background-color: transparent;
+    }
+}

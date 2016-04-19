@@ -5,22 +5,24 @@
 // Reset and dependencies
 @import "common/normalize";
 
-// Utilities CSS
+// Utilities
 @import "common/utilities";
 
 // Font Awesome
 @import "common/font";
 
-// Core CSS
+// Core
 @import "common/scaffolding";
 @import "common/grid";
 
-// Components CSS
+// Components
 @import "common/navs";
 @import "common/layout";
 
 
-// Module CSS
+// Module common
+@import "common/common";
+
+
+// Module
 @import "home/common";
-@import "about/common";
-@import "dynamic/common";
