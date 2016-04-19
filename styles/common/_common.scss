@@ -28,6 +28,7 @@
 //== 团队
 .team {
     @include e(pnl) {
+        @extend .clearfix;
         width: 710px;
         margin: 0 auto 10px;
         padding: 20px;
@@ -86,5 +87,55 @@
         border: 1px solid #fff;
         color: #fff;
         background-color: transparent;
+    }
+}
+
+//== 资本
+.capital {
+    @include e(pnl-success) {
+        width: 600px;
+        margin: 0 auto 50px;
+        padding: 40px;
+        border-radius: $border-radius-base;
+        line-height: 200%;
+        text-indent: 20px;
+        color: #fff;
+        background-color: $brand-success;
+    }
+
+    @include e(pnl-primary) {
+        @extend .capital__pnl-success;
+        background-color: $brand-primary;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    @include e(btns) {
+        margin-bottom: 80px;
+        text-align: center;
+        font-size: 0;
+    }
+
+    @include e(btn) {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: $border-radius-base;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    @include e(btn-start) {
+        @extend .capital__btn;
+        background-color: #e2b85f;
+    }
+
+    @include e(btn-middle) {
+        @extend .capital__btn;
+        background-color: #f69c3b;
+    }
+
+    @include e(btn-end) {
+        @extend .capital__btn;
+        background-color: #b4865d;
     }
 }
